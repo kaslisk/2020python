@@ -1,0 +1,21 @@
+# while (guessing game)
+
+import random
+
+player = int(input("enter number"))
+running = True
+computer = random.randint(1, 100)
+
+while running:
+  if player < computer:
+    print("guess higher")
+    player = int(input())
+  elif player > computer:
+    print("guess lower")
+    player = int(input())
+  else:
+    print("bruh moment")
+    break
+    
+# google broke so i save it n github
+   
