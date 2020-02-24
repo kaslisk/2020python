@@ -20,3 +20,60 @@ while running:
     
 # google broke so i save it in github
    
+
+
+
+
+# calculator thing
+
+x = int(input("enter x value: "))
+total = 0
+
+for i in range(x):
+  num = int(input("enter number: "))
+  total += num
+
+print("the sum is: " + str(total))
+print("the average value is: " + str(total/x))
+
+
+
+
+# the other calculator thing i dont know what the fuck is this it doesnt even work
+
+total = 0
+count = 0
+highest = 0
+lowest = 101
+
+num = int(input("enter number: "))
+while num != -1:
+  num = int(input("enter number: "))
+  if num > 0:
+    total += num
+    count += 1
+    if num > highest:
+      highest = num
+    if num < lowest:
+      lowest = num
+  num = int(input("enter number: "))
+  
+print(f"Highest: {highest}")
+print(f"Lowest: {lowest}")
+print(total)
+
+
+#functions. a reusable subprogram that performs a well defined task.
+
+def menu():
+  print("(1) Add")
+  print("(2) Update")
+  print("(3) Delete")
+  print("(4) Search")
+  print("(5) Quit")
+
+option = input()
+while option != '0':
+  menu()
+  option = input()
+print("bye")
