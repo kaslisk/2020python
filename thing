@@ -9,13 +9,14 @@ computer = random.randint(1, 100)
 while running:
   if player < computer:
     print("guess higher")
-    player = int(input())
+    player = int(input("try again"))
   elif player > computer:
     print("guess lower")
-    player = int(input())
+    player = int(input("try again"))
   else:
     print("bruh moment")
+    print("the number is " + str(computer))
     break
     
-# google broke so i save it n github
+# google broke so i save it in github
    
