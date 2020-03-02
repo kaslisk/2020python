@@ -21,13 +21,19 @@ def update_item(old_mark):
 
 def delete_item(score):
   print("Deleting item...")
-  marks.remove(score)
+  if score in marks:
+    marks.remove(score)
+  else:
+    print('cringe vro')
 
 def show_items():
   print("All items: ", end='')
-  for mark in marks:
-    print(mark, end=' ')
-  print()
+  if marks != []: # if len(marks) > 0:
+    for mark in marks:
+      print(mark, end=' ')
+    print()
+  else: # empty list
+    print("null")
 
 # main
 choice = ''
