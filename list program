@@ -1,0 +1,53 @@
+# Program to CRUD list / array
+# g00g13 br0k3 4g41n
+
+def menu():
+  print("(1) insert item")
+  print("(2) update item")
+  print("(3) delete item")
+  print("(4) show all items")
+  print("(0) quit")
+
+def insert_item(score):
+  print("Inserting item...")
+  marks.append(score)
+
+def update_item(old_mark):
+  print("Updating item...")
+  for i in range(len(marks)):
+    if marks[i] == old_mark:
+      new_mark = int(input("Enter new mark: "))
+      marks[i] = new_mark
+
+def delete_item(score):
+  print("Deleting item...")
+  marks.remove(score)
+
+def show_items():
+  print("All items: ", end='')
+  for mark in marks:
+    print(mark, end=' ')
+  print()
+
+# main
+choice = ''
+#marks = [] # create empty list (global variable)
+marks = [88, 100, 75]
+while choice != '0':
+  menu()
+  choice = input("Enter choice: ")
+  if choice == '1': # insert item
+    mark = int(input("Enter mark to insert: "))
+    insert_item(mark)
+  elif choice == '2': # update item
+    mark = int(input("Enter mark to update: "))
+    update_item(mark)
+  elif choice == '3': # delete item
+    mark = int(input("Enter mark to delete: "))
+    delete_item(mark)
+  elif choice == '4': # show all items
+    show_items()
+  elif choice == '0':
+    print("fuck off")
+  else: # invalid choice
+    print("fuck u")
